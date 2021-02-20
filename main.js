@@ -1,6 +1,6 @@
 // GET REQUEST
 function getTodos(){
-	axios('https://jsonplaceholder.typicode.com/todos?_limit=5')
+	axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
 		.then(res => showOutput(res))
 		.catch(err => console.log(err));
 }
