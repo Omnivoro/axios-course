@@ -1,7 +1,7 @@
 // GET REQUEST
 function getTodos() {axios({method: 'get',
 		   url: 'https://jsonplaceholder.typicode.com/todos'})
-		.then(res => console.log(res.data))
+		.then(res => showOutput(res))
 		.catch(err => console.log(err));
 }
 
