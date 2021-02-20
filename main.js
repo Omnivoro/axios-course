@@ -7,12 +7,9 @@ function getTodos(){
 
 // POST REQUEST
 function addTodo() {
-  axios({method: 'post',
-    	 url: 'https://jsonplaceholder.typicode.com/todos',
-     	 data: {
-			title: 'A new post',
-			completed: false 
-     }}).then(res => showOutput(res))
+  axios.post('https://jsonplaceholder.typicode.com/todos', {title: 'A new post',
+															completed: false })
+	  	.then(res => showOutput(res))
 		.catch(err => console.log(err));
 }
 
