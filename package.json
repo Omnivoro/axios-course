@@ -1,0 +1,19 @@
+{
+  "name": "axios-travis",
+  "version": "1.0.0",
+  "description": "Axios course by Travis Media",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradtraversy/axios-crash.git"
+  },
+  "author": "Orlando De Abreu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradtraversy/axios-crash/issues"
+  },
+  "homepage": "https://github.com/bradtraversy/axios-crash#readme"
+}
