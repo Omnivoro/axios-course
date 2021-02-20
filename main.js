@@ -15,8 +15,10 @@ function addTodo() {
 
 // PUT/PATCH REQUEST
 function updateTodo() {
-  axios.put('https://jsonplaceholder.typicode.com/todos/1', {title: 'Update post',
-	 													 completed: true })
+  axios({method: 'patch',
+  			  url: 'https://jsonplaceholder.typicode.com/todos/1',
+  			 data: {title: 'Update post',
+	 		    completed: true }})
   		.then(res => showOutput(res))
 		.catch(err => console.log(err));
 }
