@@ -138,6 +138,13 @@ axios.interceptors.request.use(
 );
 
 // AXIOS INSTANCES
+// AXIOS INSTANCE
+const axiosInstance = axios.create({
+  // Other custom settings
+  baseURL: 'https://jsonplaceholder.typicode.com'
+});
+
+axiosInstance.get('/comments').then(res => showOutput(res));
 
 // Show output in browser
 function showOutput(res) {
