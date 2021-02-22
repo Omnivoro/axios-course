@@ -23,8 +23,12 @@ function updateTodo() {
 
 // DELETE REQUEST
 function removeTodo() {
-  console.log('DELETE Request');
+  axios({method: 'delete',
+  		url: 'https://jsonplaceholder.typicode.com/todos/1'})
+  		.then(res => showOutput(res))
+		.catch(err => console.log(err));
 }
+
 
 // SIMULTANEOUS DATA
 function getData() {
