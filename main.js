@@ -4,7 +4,9 @@ axios.defaults.headers.common['X-Auth-Token'] =
 
 // GET REQUEST
 function getTodos(){
-	axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
+	axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5', {
+      timeout: 5000
+    })
 		.then(res => showOutput(res))
 		.catch(err => console.error(err));
 }
@@ -85,9 +87,9 @@ function transformResponse() {
 function errorHandling() {
   axios
     .get('https://jsonplaceholder.typicode.com/todoss', {
-      validateStatus: function(status) {
-      	return status < 500; // Reject only if status is greater or equal to 500
-      	}
+      // validateStatus: function(status) {
+      //   return status < 500; // Reject only if status is greater or equal to 500
+      // }
     })
     .then(res => showOutput(res))
     .catch(err => {
